@@ -7,30 +7,22 @@ angular.module("demo").controller("NestedListsDemoController", function($scope) 
         selected: null,
         templates: [
             {type: "item", id: 2},
-            {type: "container", id: 1, columns: [[], []]}
+            {type: "container", id: 1, children: []}
         ],
         dropzones: {
             "A": [
                 {
                     "type": "container",
                     "id": 1,
-                    "columns": [
-                        [
-                            {
-                                "type": "item",
-                                "id": "1"
-                            },
-                            {
-                                "type": "item",
-                                "id": "2"
-                            }
-                        ],
-                        [
-                            {
-                                "type": "item",
-                                "id": "3"
-                            }
-                        ]
+                    "children": [
+                        {
+                            "type": "item",
+                            "id": "1"
+                        },
+                        {
+                            "type": "item",
+                            "id": "2"
+                        }
                     ]
                 },
                 {
@@ -58,53 +50,45 @@ angular.module("demo").controller("NestedListsDemoController", function($scope) 
                 {
                     "type": "container",
                     "id": "2",
-                    "columns": [
-                        [
-                            {
-                                "type": "item",
-                                "id": "9"
-                            },
-                            {
-                                "type": "item",
-                                "id": "10"
-                            },
-                            {
-                                "type": "item",
-                                "id": "11"
-                            }
-                        ],
-                        [
-                            {
-                                "type": "item",
-                                "id": "12"
-                            },
-                            {
-                                "type": "container",
-                                "id": "3",
-                                "columns": [
-                                    [
-                                        {
-                                            "type": "item",
-                                            "id": "13"
-                                        }
-                                    ],
-                                    [
-                                        {
-                                            "type": "item",
-                                            "id": "14"
-                                        }
-                                    ]
-                                ]
-                            },
-                            {
-                                "type": "item",
-                                "id": "15"
-                            },
-                            {
-                                "type": "item",
-                                "id": "16"
-                            }
-                        ]
+                    "children": [
+                        {
+                            "type": "item",
+                            "id": "9"
+                        },
+                        {
+                            "type": "item",
+                            "id": "10"
+                        },
+                        {
+                            "type": "item",
+                            "id": "11"
+                        },
+                        {
+                            "type": "item",
+                            "id": "12"
+                        },
+                        {
+                            "type": "container",
+                            "id": "3",
+                            "children": [
+                                {
+                                    "type": "item",
+                                    "id": "13"
+                                },
+                                {
+                                    "type": "item",
+                                    "id": "14"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "item",
+                            "id": "15"
+                        },
+                        {
+                            "type": "item",
+                            "id": "16"
+                        }
                     ]
                 },
                 {
